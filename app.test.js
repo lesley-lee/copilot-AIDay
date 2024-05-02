@@ -35,7 +35,7 @@ describe('app.js', () => {
     });
 
     it('should return 500 Internal Server Error if file reading or writing fails', async () => {
-      // Mock fs.readFile to simulate an error
+      // Mock fs.readFile to simulate an error //
       jest.spyOn(fs, 'readFile').mockImplementation((path, encoding, callback) => {
         callback(new Error('File read error'));
       });
