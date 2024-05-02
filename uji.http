@@ -20,7 +20,7 @@ Content-Type: application/json
 
 // Challenge 1
 ###
-PUT http://localhost:3000/api/negeri/14
+PUT http://localhost:3000/api/negeri/Wilayah Persekutuan Kuala Lumpur
 content-type: application/json
 
 {
