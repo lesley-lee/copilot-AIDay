@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if a branch name was provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <branch_name>"
+    exit 1
+fi
+
+# Set the branch name to the provided argument
+BRANCH_NAME=$1
+
+# Execute git commands
+git remote add origin https://github.com/GitHub-Enovade-Lab/copilot-AIDay.git
+git checkout -b $BRANCH_NAME
+git remote set-url origin https://github.com/GitHub-Enovade-Lab/copilot-AIDay.git
+git add .
+git commit -m "commit by $BRANCH_NAME"
+git push -u origin $BRANCH_NAME

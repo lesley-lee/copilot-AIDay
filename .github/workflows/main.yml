@@ -1,0 +1,22 @@
+name: Test Update API Endpoints
+on: push
+
+jobs:
+  test_api:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js v18
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18' # Specify the Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run test file
+      run: npm run test:file -- hackathon.test.js  # Modify this line to specify the test file
+      env:
+        CI: true
